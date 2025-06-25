@@ -1066,6 +1066,45 @@
 
 
 
+    <!-- Back TO TOp -->
+    <button id="backToTop" title="Back to top">&#8679;</button>
+    <style>
+        #backToTop {
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 100;
+            background: #333;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+
+        #backToTop:hover {
+            background: #555;
+        }
+    </style>
+    <script>
+        const btn = document.getElementById('backToTop');
+        window.onscroll = function () {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+        btn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+
     <!-- JS Here -->
     <script src="assets/js/main.js"></script>
 </body>
