@@ -192,6 +192,188 @@
         });
     </script>
 
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Empowering Your CSS Workflow</h1>
+                    <p>
+                        Project Sass delivers a robust, scalable, and maintainable CSS architecture for modern web
+                        projects.
+                        Accelerate your development with modular design, responsive layouts, and seamless customization.
+                    </p>
+                    <ul class="hero-features">
+                        <li>Dynamic, component-driven styling</li>
+                        <li>Rapid prototyping and easy theming</li>
+                        <li>Optimized for performance and accessibility</li>
+                    </ul>
+                    <a href="#promise" class="hero-btn">Discover Our Promise</a>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80"
+                        alt="Modern workspace" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .hero-section {
+            background: linear-gradient(120deg, #007bff 0%, #6c63ff 100%);
+            color: #fff;
+            padding: clamp(3rem, 8vw, 7rem) 0 clamp(2rem, 6vw, 5rem) 0;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(1rem, 4vw, 3rem);
+            width: 100%;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: clamp(2rem, 6vw, 4rem);
+        }
+
+        .hero-text {
+            flex: 1 1 340px;
+            min-width: 280px;
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            margin-bottom: 1.1em;
+            font-weight: 800;
+            line-height: 1.15;
+        }
+
+        .hero-text p {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            margin-bottom: 1.5em;
+            color: #e3e8ff;
+            line-height: 1.6;
+        }
+
+        .hero-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2em 0;
+        }
+
+        .hero-features li {
+            position: relative;
+            padding-left: 1.7em;
+            margin-bottom: 0.7em;
+            font-size: 1.08em;
+            color: #e0e6ff;
+        }
+
+        .hero-features li::before {
+            content: '';
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 0.2em;
+            width: 1.1em;
+            height: 1.1em;
+            background: url('data:image/svg+xml;utf8,<svg fill="007bff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="%23007bff" d="M16.707 5.293a1 1 0 00-1.414 0L8 12.586 4.707 9.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l8-8a1 1 0 000-1.414z"/></svg>') no-repeat center/contain;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: #fff;
+            color: #007bff;
+            padding: 0.85em 2.2em;
+            border-radius: 2em;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
+            transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+            margin-top: 0.5em;
+        }
+
+        .hero-btn:hover {
+            background: #007bff;
+            color: #fff;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.13);
+        }
+
+        .hero-image {
+            flex: 1 1 320px;
+            min-width: 240px;
+            max-width: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            border-radius: 1.5em;
+            box-shadow: 0 6px 32px rgba(0, 0, 0, 0.18);
+            object-fit: cover;
+            background: #e6e8f7;
+        }
+
+        @media (max-width: 900px) {
+            .hero-content {
+                flex-direction: column-reverse;
+                gap: 2.5rem;
+            }
+
+            .hero-image,
+            .hero-text {
+                max-width: 100%;
+            }
+
+            .hero-section {
+                min-height: unset;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-section {
+                padding: 2.2rem 0 1.5rem 0;
+            }
+
+            .hero-text h1 {
+                font-size: 1.3rem;
+            }
+
+            .hero-image img {
+                max-height: 220px;
+                border-radius: 1em;
+            }
+        }
+    </style>
+    <script>
+        // Animate hero section on load
+        document.addEventListener('DOMContentLoaded', function () {
+            const hero = document.querySelector('.hero-section');
+            if (hero) {
+                hero.style.opacity = 0;
+                hero.style.transform = 'translateY(40px)';
+                setTimeout(() => {
+                    hero.style.transition = 'opacity 0.8s, transform 0.8s';
+                    hero.style.opacity = 1;
+                    hero.style.transform = 'translateY(0)';
+                }, 120);
+            }
+        });
+    </script>
+
+
 
 
     <!-- JS Here -->
