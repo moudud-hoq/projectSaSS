@@ -594,6 +594,271 @@
     </script>
 
 
+    <!-- Slider Section -->
+    <section class="slider-section">
+        <div class="container">
+            <h2 class="slider-title">Our Featured Projects</h2>
+            <div class="slick-slider">
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80"
+                        alt="Project 1" />
+                    <div class="slide-caption">
+                        <h3>Modern Dashboard</h3>
+                        <p>Clean, responsive UI for analytics and business intelligence.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80"
+                        alt="Project 2" />
+                    <div class="slide-caption">
+                        <h3>Creative Portfolio</h3>
+                        <p>Showcase your work with elegant, dynamic layouts.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80"
+                        alt="Project 3" />
+                    <div class="slide-caption">
+                        <h3>E-Commerce Platform</h3>
+                        <p>Robust, scalable solution for modern online stores.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=600&q=80"
+                        alt="Project 4" />
+                    <div class="slide-caption">
+                        <h3>Team Collaboration</h3>
+                        <p>Empowering teams with real-time communication tools.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=600&q=80"
+                        alt="Project 5" />
+                    <div class="slide-caption">
+                        <h3>Startup Landing Page</h3>
+                        <p>Engaging landing page for innovative startups and products.</p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=600&q=80"
+                        alt="Project 6" />
+                    <div class="slide-caption">
+                        <h3>Education Platform</h3>
+                        <p>Interactive learning experience for students and educators.</p>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!-- Custom Slider Styles -->
+    <style>
+        .slider-section {
+            background: #f4f7fb;
+            padding: 4rem 0;
+            margin: 3rem 0;
+        }
+
+        .slider-section .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 1.5rem;
+        }
+
+        .slider-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #222;
+        }
+
+        .slide {
+            background: #fff;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+            display: flex !important;
+            flex-direction: column;
+            min-height: 340px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            background: #e6e8f7;
+        }
+
+        .slide-caption {
+            padding: 1rem 1.5rem;
+            text-align: center;
+        }
+
+        .slide-caption h3 {
+            color: #007bff;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 0.5rem 0;
+        }
+
+        .slide-caption p {
+            color: #444;
+            font-size: 1rem;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Custom Dots */
+        .slick-dots {
+            bottom: -30px;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            list-style: none;
+            gap: 8px;
+        }
+
+        .slick-dots li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .slick-dots li button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 0;
+        }
+
+        .slick-dots li.slick-active button {
+            background: #007bff;
+        }
+
+        .slick-dots li button:before {
+            display: none;
+        }
+
+        /* Custom Arrows */
+        .slick-prev,
+        .slick-next {
+            width: 38px;
+            height: 38px;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            font-size: 0 !important;
+            /* Remove "Previous"/"Next" text */
+        }
+
+        .slick-prev:hover,
+        .slick-next:hover {
+            background: #007bff;
+            border-color: #007bff;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            font-family: 'slick';
+            font-size: 18px;
+            opacity: 1;
+            color: #007bff;
+        }
+
+        .slick-prev:hover:before,
+        .slick-next:hover:before {
+            color: white;
+        }
+
+        .slick-prev {
+            left: -45px;
+        }
+
+        .slick-next {
+            right: -45px;
+        }
+
+        .slick-prev:before {
+            content: '←';
+        }
+
+        .slick-next:before {
+            content: '→';
+        }
+
+        @media (max-width: 768px) {
+
+            .slick-prev,
+            .slick-next {
+                display: none !important;
+            }
+
+            .slide img {
+                height: 160px;
+            }
+        }
+    </style>
+
+    <!-- jQuery + Slick JS -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- Slider Init Script -->
+    <script>
+        $(document).ready(function () {
+            $('.slick-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true,
+                adaptiveHeight: true,
+                customPaging: function (slider, i) {
+                    return '<button type="button"></button>';
+                },
+                responsive: [
+                    {
+                        breakpoint: 900,
+                        settings: {
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+
+
+
 
     <!-- JS Here -->
     <script src="assets/js/main.js"></script>
