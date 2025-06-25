@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Sass</title>
+
+    <!-- Style FIles -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+
+</head>
+
+<body>
+    <!-- Top Header -->
+    <div class="top-header">
+        <div class="container">
+            <span>Project Sass: Minimal, Modern, Powerful.</span>
+            <span class="contact-info"><a href="mailto:info@projectsass.com">info@projectsass.com</a></span>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">Sass</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#promise">Promise</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <style>
+        .top-header {
+            background: #111;
+            color: #fff;
+            font-size: 14px;
+            padding: 10px 0;
+            letter-spacing: 0.5px;
+        }
+
+        .top-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 32px;
+            min-height: 36px;
+        }
+
+        .top-header .contact-info a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            opacity: 0.85;
+            transition: opacity 0.2s;
+            padding-left: 12px;
+        }
+
+        .top-header .contact-info a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .navbar {
+            background: #fff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 32px;
+            min-height: 60px;
+        }
+
+        .logo {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #222;
+            letter-spacing: 1.2px;
+            text-decoration: none;
+            padding: 10px 0;
+            margin-right: 32px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .nav-links li a {
+            color: #222;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            padding: 8px 18px;
+            border-radius: 6px;
+            transition: background 0.15s, color 0.15s;
+            display: block;
+        }
+
+        .nav-links li a:hover,
+        .nav-links li a.active {
+            background: #f2f6ff;
+            color: #007bff;
+        }
+
+        @media (max-width: 900px) {
+
+            .top-header .container,
+            .navbar .container {
+                max-width: 98vw;
+                padding: 0 12px;
+            }
+
+            .logo {
+                margin-right: 18px;
+            }
+
+            .nav-links {
+                gap: 14px;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .top-header .container,
+            .navbar .container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 6px;
+                min-height: unset;
+                padding: 0 8px;
+            }
+
+            .top-header {
+                font-size: 13px;
+                padding: 7px 0;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 6px;
+                width: 100%;
+                margin-top: 4px;
+            }
+
+            .logo {
+                padding: 8px 0 0 0;
+                margin-right: 0;
+            }
+
+            .nav-links li a {
+                padding: 8px 10px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+    <script>
+        // Minimal active nav link highlight on scroll
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('.nav-links a');
+            function setActive() {
+                let fromTop = window.scrollY + 70;
+                links.forEach(link => {
+                    const section = document.querySelector(link.getAttribute('href'));
+                    if (section && section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                        links.forEach(l => l.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                });
+            }
+            window.addEventListener('scroll', setActive);
+            setActive();
+        });
+    </script>
+
+
+
+    <!-- JS Here -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
